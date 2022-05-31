@@ -1,0 +1,8 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros" args="$(find lab6)/world/playground.world" />
+   <node name="perception" pkg="lab6" type="perception.py" args=" -d $(find lab6)/scripts/perception.py" output="screen"/>
+	      
+	 <!-- Launch RVIZ -->
+    	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find lab6)/launch/lab6.rviz" output="screen"/>
+</launch>
+
